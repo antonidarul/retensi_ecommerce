@@ -64,6 +64,28 @@ WHERE order_status = 'Delivered'
 GROUP BY customer_id, DATE_TRUNC('month', order_date)
 ORDER BY customer_id, purchase_month;
 
+SELECT
+    customer_id,
+    COUNT(DISTINCT order_id) AS purchase_count
+FROM orders
+GROUP BY customer_id
+HAVING COUNT(DISTINCT order_id) > 1
+ORDER BY purchase_count DESC;
+
+SELECT
+    customer_id,
+    order_id,
+    order_status,
+    order_date
+FROM orders
+WHERE customer_id IN (
+    SELECT customer_id
+    FROM orders
+    GROUP BY customer_id
+    HAVING COUNT(DISTINCT order_id) > 1
+)
+ORDER BY customer_id, order_date;
+
 -- combine cohort_month and purchase month
 WITH customer_cohort AS (
     SELECT

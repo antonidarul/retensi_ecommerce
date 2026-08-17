@@ -1,1 +1,9 @@
-key of metrics
+key insight
+The customer base is heavily dominated by one-time buyers, with no observed successful repeat purchases.
+Coupon usage did not show a measurable relationship with repeat purchase because both coupon and non-coupon customers had a 0% successful repeat purchase rate.
+No acquisition channel generated an observed successful repeat customer, so channel-level retention performance cannot yet be reliably compared.
+Only 231 of 1,200 orders were Delivered, indicating that order completion and fulfillment may be an important area for further investigation.
+
+recommendation
+Prioritize second-purchase conversion rather than broad retention campaigns.
+o not optimize acquisition channels based on retention yet. First collect more repeat-purchase data, then compare customer quality across acquisition channels.
